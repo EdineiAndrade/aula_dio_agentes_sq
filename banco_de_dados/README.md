@@ -7,18 +7,18 @@
 
 ## **Visão Geral do Projeto**
 
-Neste segmento, criamos um script capaz de gerar uma massa de dados fictícia do banco ficiticio DioBank. O propósito é gerar arquivos relacionados emm CSV e também em ingestar em um banco de dados MYSQL configurado localmente. Este script foi desenvolvida como parte de um curso prático na plataforma DIO.me (https://www.dio.me/pt). O projeto é uma simulação de um banco financeiro, onde você irá interagir com um banco de dados MySQL utilizando comandos SQL.
+Neste segmento, criamos um script capaz de gerar uma massa de dados fictícia do banco ficiticio DioBank. O propósito é gerar arquivos relacionados emm CSV e também em ingestar em um banco de dados MYSQL configurado localmente. Este script foi desenvolvida como parte de um curso prático na plataforma DIO.me (https://www.dio.me/pt). O projeto é uma simulação de um banco financeiro, onde você irá interagir com um banco de dados PostgreSQL utilizando comandos SQL.
 
 
 ## **Pré-requisitos**
 
 1. Instale os pacotes do requirements.txt
-2. Instale e ative um banco de dados MySQL em seu computador pessoal. 
+2. Instale e ative um banco de dados PostgreSQL, no Supabase. Consulte:
 3. Configure as credenciais de acesso no arquivo .env
 
 ### **Objetivo do Projeto**
 
-O foco deste projeto é gerar, manipular e consultar dados fictícios que simulam as operações de um banco. Ele foi desenvolvido como parte do curso de "Agentes de IA para Consultas SQL", onde os alunos terão a oportunidade de entender como funcionam as consultas em bancos de dados relacionais, utilizando o MySQL para gerir uma base de dados de clientes, endereços, pagamentos e movimentações financeiras.
+O foco deste projeto é gerar, manipular e consultar dados fictícios que simulam as operações de um banco. Ele foi desenvolvido como parte do curso de "Agentes de IA para Consultas SQL", onde os alunos terão a oportunidade de entender como funcionam as consultas em bancos de dados relacionais, utilizando o PostgreSQL  para gerir uma base de dados de clientes, endereços, pagamentos e movimentações financeiras.
 
 ## **Estrutura do Projeto**
 
@@ -51,7 +51,7 @@ CREATE TABLE clientes (
 );
 
 CREATE TABLE enderecos (
-    endereco_id INT AUTO_INCREMENT PRIMARY KEY,
+    endereco_id SERIAL PRIMARY KEY,
     cliente_id INT,
     rua VARCHAR(255),
     cidade VARCHAR(100),
@@ -61,7 +61,7 @@ CREATE TABLE enderecos (
 );
 
 CREATE TABLE movimentacoes (
-    movimentacao_id INT AUTO_INCREMENT PRIMARY KEY,
+    movimentacao_id SERIAL PRIMARY KEY,
     cliente_id INT,
     tipo_movimentacao VARCHAR(50),
     valor DECIMAL(10, 2),
@@ -70,7 +70,7 @@ CREATE TABLE movimentacoes (
 );
 
 CREATE TABLE pagamentos (
-    pagamento_id INT AUTO_INCREMENT PRIMARY KEY,
+    pagamento_id SERIAL PRIMARY KEY,
     cliente_id INT,
     valor DECIMAL(10, 2),
     data_pagamento DATE,

@@ -8,16 +8,16 @@ import json
 load_dotenv()
 
 # --- CONFIGURAÇÃO DA PÁGINA STREAMLIT ---
-st.set_page_config(page_title="dioBank Consultas", page_icon="🏛️")
-st.title("🏛️ dioBank Consultas")
+st.set_page_config(page_title="DIOBANK AI", page_icon="🏛️🤖")
+st.title("🏛️🤖 DioBank AI - Consultas SQL")
 
 # --- CONFIGURAÇÃO DA SIDEBAR (INSERÇÃO DE CREDENCIAIS) ---
 st.sidebar.header("🔐 Configurações")
 openai_api_key = st.sidebar.text_input("Chave da API OpenAI", type="password", value=os.getenv("OPENAI_API_KEY"))
-db_host = st.sidebar.text_input("Supabase Host", value=os.getenv("SUPABASE_DB_HOST"))
-db_user = st.sidebar.text_input("Usuário Supabase", value=os.getenv("SUPABASE_DB_USER"))
-db_password = st.sidebar.text_input("Senha Supabase", type="password", value=os.getenv("SUPABASE_DB_PASSWORD"))
-db_name = st.sidebar.text_input("Nome do Banco de Dados", value=os.getenv("SUPABASE_DB_NAME"))
+db_host = st.sidebar.text_input("PostgreSQL Host", value=os.getenv("POSTGRE_DB_HOST"))
+db_user = st.sidebar.text_input("Usuário PostgreSQL", value=os.getenv("POSTGRE_DB_USER"))
+db_password = st.sidebar.text_input("Senha PostgreSQL", type="password", value=os.getenv("POSTGRE_DB_PASSWORD"))
+db_name = st.sidebar.text_input("Nome do Banco de Dados", value=os.getenv("POSTGRE_DB_NAME"))
 db_port = st.sidebar.text_input("Porta", value="5432")  # Porta padrão do PostgreSQL
 
 # --- MEIO: INTERAÇÃO COM O USUÁRIO E ENTRADA DA PERGUNTA ---

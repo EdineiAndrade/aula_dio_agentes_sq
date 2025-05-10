@@ -48,10 +48,10 @@ Resposta em SQL:
 def obter_estruturas_tabelas() -> dict:
     try:
         conn = psycopg2.connect(
-            host=os.getenv("SUPABASE_DB_HOST"),
-            user=os.getenv("SUPABASE_DB_USER"),
-            password=os.getenv("SUPABASE_DB_PASSWORD"),
-            database=os.getenv("SUPABASE_DB_NAME")
+            host=os.getenv("POSTGRE_DB_HOST"),
+            user=os.getenv("POSTGRE_DB_USER"),
+            password=os.getenv("POSTGRE_DB_PASSWORD"),
+            database=os.getenv("POSTGRE_DB_NAME")
         )
         cursor = conn.cursor()
         cursor.execute("SHOW TABLES;")
@@ -71,13 +71,13 @@ def obter_estruturas_tabelas() -> dict:
 
 # Função simples que executa a query SQL
 def executar_query_func(query: str) -> str:
-    """Executa uma query SQL real no banco MySQL e retorna os resultados."""
+    """Executa uma query SQL real no banco POSTGRE e retorna os resultados."""
     try:
         conn = psycopg2.connect(
-            host=os.getenv("SUPABASE_DB_HOST", "localhost"),
-            user=os.getenv("SUPABASE_DB_USER", "root"),
-            password=os.getenv("SUPABASE_DB_PASSWORD", "admin123"),
-            database=os.getenv("SUPABASE_DB_NAME", "dioBank")
+            host=os.getenv("POSTGRE_DB_HOST", "localhost"),
+            user=os.getenv("POSTGRE_DB_USER", "root"),
+            password=os.getenv("POSTGRE_DB_PASSWORD", "admin123"),
+            database=os.getenv("POSTGRE_DB_NAME", "dioBank")
         )
         cursor = conn.cursor()
         cursor.execute(query)

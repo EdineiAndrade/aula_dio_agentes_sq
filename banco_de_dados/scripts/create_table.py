@@ -1,22 +1,21 @@
 import csv
 import random
-import mysql.connector
 from faker import Faker
 from datetime import datetime
 import os
 from dotenv import load_dotenv
 import psycopg2
 
-# Carregar credenciais do MYSQL e declarar variaveis
+# Carregar credenciais do POSTGRE e declarar variaveis
 load_dotenv()
 n = 100  # Número de registros a serem gerados
 database=os.getenv("SUPABASE_DB_NAME")
 conn = psycopg2.connect(
-    host=os.getenv("SUPABASE_DB_HOST"),
-    port=os.getenv("SUPABASE_DB_PORT"),
-    database=os.getenv("SUPABASE_DB_NAME"),
-    user=os.getenv("SUPABASE_DB_USER"),
-    password=os.getenv("SUPABASE_DB_PASSWORD")
+    host=os.getenv("POSTGRE_DB_HOST"),
+    port=os.getenv("POSTGRE_DB_PORT"),
+    database=os.getenv("POSTGRE_DB_NAME"),
+    user=os.getenv("POSTGRE_DB_USER"),
+    password=os.getenv("POSTGRE_DB_PASSWORD")
 )
 
 cursor = conn.cursor()
