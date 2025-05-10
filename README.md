@@ -1,25 +1,49 @@
-<h1 align="center">
-<img src="https://img.shields.io/static/v1?label=AGENTE%20de%20SQL%20POR&message=MAYCON%20BATESTIN&color=7159c1&style=flat-square&logo=ghost"/>
+# <div align="center">
+  <img src="https://img.shields.io/static/v1?label=AGENTE%20SQL%20SUPABASE&message=DIOBANK%20IA&color=36BCF7&style=for-the-badge&logo=supabase"/>
+</div>
 
-<h3> <p align="center">Agente de Consulta SQL -  DIOBANK </p> </h3>
-<h3> <p align="center"> ================= </p> </h3>
+<div align="center">
+  <img src="https://supabase.com/images/logo-light.png" width="200">
+  <h2>🛠️ Assistente de Consultas SQL com IA + Supabase</h2>
+</div>
 
+---
 
-## **Visão Geral do Projeto**
+## 🔌 **Configuração Inicial**
 
-Nesta aula vamos propor uma visão geral sobre o papel do agente de IA, e como ele pode ajudar na manipulação e insigths em consultas de SQL.
-Para tanto foi necessário construir um banco de dados MYSQL localhost e construir um dataset ficticio, que neste cenário, chama-se Dio Bank.
+### 1. Variáveis de Ambiente (`.env`)
 
-## **Arquitetura do projeto**
-![delta](img/arquitetura.png)
+```bash
+# Supabase
+SUPABASE_URL=seu-projeto.supabase.co
+SUPABASE_KEY=chave-anon-publica
+SUPABASE_SECRET=chave-secreta-servico
+SUPABASE_DB_PASSWORD=sua-senha-superuser
 
+# OpenAI
+OPENAI_API_KEY=sk-...
+2. Estrutura de Pastas
+.
+├── aula_dio_agentes_sq/
+│   ├── agentes/scripts            # Streamlit App
+│   ├── streamlit_agente.py 
+    └── terminal_agente.py 
+```
 
-## **Pré-requisitos**
+🚀 Como Executar
+bash
+# Instalar dependências
+```bash
+pip install -r requirements.txt
+```
+# Iniciar aplicação
+```bash
+streamlit run agente/scripts/streamlit_agent.py
+```
 
-1. Tenha um banco de dados MYSQL instalado em sua máquina (na pasta ```banco_de_dados``` existem dois arquivos em raiz,  ```instalar_mysql_mac.sh``` e ```instalador_windows.txt``` para quem não possui instalado localmente, possa instalar tranquilamente.)
-2. Instale um ambiente virtual python utilizando o arquivo na raiz ```env_install.sh```
-3. Instale as depedencias via pip install -r requirements.txt
-4. Configure as credencias do seu banco de dados em .env
-5. Insira os dados em seu banco MYSQL a partir do script localizado em <b> banco_de_dados/scripts/create_table.py
-6. Rode os scripts pythons localizados na pasta agente.
+# 🛠️ Tecnologias Utilizadas
+<p align="left"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50" title="Python"/> <img src="https://supabase.com/images/logo-light.png" width="200" title="Supabase"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="50" title="PostgreSQL"/> <img src="https://img.icons8.com/nolan/64/chatgpt.png" width="50" color=wait title="OpenAI"/> </p>
+
+#  Professor
+<div align="left"> <h2>⚡ Desenvolvido por Maycon Batestin para DIO</h2> </div> 
 

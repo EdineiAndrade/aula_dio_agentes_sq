@@ -1,5 +1,5 @@
-openai==0.28
-mysql-connector-python
-python-dotenv
-streamlit
-faker
+streamlit==1.29.0
+openai==0.28.0
+python-dotenv==1.0.0
+faker==19.6.2
+psycopg2-binary==2.9.9  # Versão mais leve para o Supabase/PostgreSQL

@@ -4,3 +4,39 @@ materiais/agents_sql.pptx
 .python-version
 .DS_Store
 db/
+# Streamlit
+# Arquivos de configuração
+.env
+.python-version
+.DS_Store
+
+# Diretórios
+db/
+materials/
+parametros/
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+*.py,cover
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Streamlit
+.streamlit/
